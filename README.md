@@ -50,8 +50,8 @@ O movimento é mais preciso, se fosse mouse seria melhor, o trackpad perde muita
 
 #### Which felt best?
 
-Keybaord was best
+Keyboard.
 
 #### Why?
 
-First off, the mouse was better. But after understading the controls, the keyboard felt best. It has a higher skill ceiling and was more intuitive.
+First off, the mouse was better. But after understading the second mapping, it felt best. It has a higher skill ceiling and was more intuitive.
