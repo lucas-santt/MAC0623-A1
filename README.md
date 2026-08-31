@@ -30,11 +30,11 @@ All of cube's rotation gimmicks were made based on world axis because of persona
 
 #### Which felt best?
 
-Com o teclado
+Keyboard
 
 #### Why?
 
-O movimento é mais preciso, o mouse tem mais variações que atrapalham
+> O movimento é mais preciso, o mouse tem mais variações que atrapalham
 
 ## P02
 
@@ -44,7 +44,7 @@ Com o teclado
 
 #### Why?
 
-O movimento é mais preciso, se fosse mouse seria melhor, o trackpad perde muita precisão
+> O movimento é mais preciso, se fosse mouse seria melhor, o trackpad perde muita precisão
 
 ## P03
 
@@ -54,4 +54,24 @@ Keyboard.
 
 #### Why?
 
-First off, the mouse was better. But after understading the second mapping, it felt best. It has a higher skill ceiling and was more intuitive.
+> First off, the mouse was better. But after understading the second mapping, it felt best. It has a higher skill ceiling and was more intuitive.
+
+## P04
+
+##### Which felt best?
+
+Keyboard.
+
+##### Why?
+
+> Mais fácil de ajustar a sensibilidade
+
+## P05
+
+#### Which felt best?
+
+Keyboard
+
+##### Why?
+
+> A distribuição das teclas é mais intuitiva
