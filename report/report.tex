@@ -1,0 +1,113 @@
+\documentclass{article}
+
+% Para aceitar caracteres especiais
+% Compilador DEVE SER LuaLatex
+\usepackage{fontspec}
+\setmonofont{Fira Code}[Scale=0.9] 
+\usepackage{lua-ul}
+
+\usepackage{hyperref}
+\usepackage{graphicx} % Imagens
+\usepackage{subcaption} % Modificar as legendas
+
+\captionsetup[figure]{labelformat=empty, name={}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INÍCIO DO DOC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Página de capa
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+
+% Autores
+{\large Lucas Antonio P. dos Santos, nUSP 13861180\par}
+
+\vspace{7cm} % Espaço entre autores e título
+
+% Título
+{\textbf{\LARGE A01 — Desktop Docking Testbed}\\
+\textbf{\Large MAC0623 - 3D Interaction in Mixed Realities}\par}
+
+\vfill % Preenche o espaço vertical até o rodapé
+
+% Rodapé
+{\large São Paulo, São Paulo\\
+August, 2026\par}
+\end{titlepage}
+
+\section{Abstract}
+
+In this Assignment, an interactable interface was created to analyze and study different types of control mappings. In this interface, we have a device with fewer degrees of freedom than the tasks needs. To overcome this issue, we design two control mappings using techniques such as decomposition and/or mode switching, for example.
+
+The task of this interface is translate and rotate a 3D cube into a translucent goal pose. Within a position and rotation tolerance, a trial ends when the cube is inside both tolerances.
+
+\section{Design Mapping 2}
+
+\subsection{First Ideas}
+
+First off, I reached for the `wasd` keys because of videogames: I'm already used to move objects in two dimensions via keyboard. The only difficulty remaining was the z-axis translation, in which was originally planned to be controlled via the 'zx' keys.
+
+On a second thought, I liked the idea of controlling both translation and rotation at the same time for better adjust when doing the given task. Doing the rotation in mouse was not of my liking because the user's hands would be using different devices at the same time, which would confuse some of the users. Again, from inspirations by videogames, I originally planned to use the arrows keys to control 2 rotation axis and the `Left Shift` and `Enter` for the last axis.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{Frame 1.png}
+    \caption{Figure 2.1.1: First Keyboard Mapping Sketch}
+    \label{fig:placeholder}
+\end{figure}
+
+\subsection{Which problems it solves?}
+
+Mode switching: With this new mapping, we can translate and rotate the cube without switching. This change should cut completion time by cutting off every switch made on mapping 1.
+
+\subsection{Enhancing mapping changes}
+
+As a improve, the Z translation keys were changed to 'rf' because it gives the sensation of "pushing/pulling" the cube away as the keys are above each other. As a similar improve, the Rotations keys were changed to: 'uo' for z translation, 'jl' for y translation and 'ik' for x translation because it makes the hand controlling it be on the same level on the keyboard as the hand controlling the translation, causing less discomfort on the user. 
+
+\section{Method}
+
+\subsection{Decisions}
+
+For rotation, baseline mapping used object reference frame while the new mapping used world reference frame. This decision was made to not confuse users on the object's changing axis. Both mapping used the same tolerances:
+
+- Translation Error: Within 0.05 scene units of target center
+
+- Orientation Error: Within 10° of target orientation
+
+\subsection{Tests and experiments}
+
+Both tests and experiments were done using Firefox Browser with Acer notebook's keyboard and touchpad as devices. Five (5) participants were involved with three starting on mapping 1 (baseline) and 2 starting on mapping 2 (keyboard) to counterbalance.
+
+The tests were run on the \href{https://lucas-santt.github.io/MAC0623-A1/}{project static pages website}
+
+\section{Results}
+
+Results are available on the \href{https://github.com/lucas-santt/MAC0623-A1}{project repository}
+
+\subsection{Discussion}
+
+As expected, the second mapping offered a noticeable decrease in completion times. On the boxplot below, we can see that the median has decreased from ~70 to ~45.
+
+One of the most frequent comments after the experiments was how precise the second mapping (keyboard) was. We can see on the error plots that is, indeed, true for the rotation. As for the position error, although its median is higher than the baseline mapping, it has become more concentrated.
+
+Finally, we can approve the original hypothesis that the exclusion of mode switching can reduce completion time. Although decomposition stills plays a role in this task, we can reduce rotation errors by changing the reference frame from object to world frame, as shown in the plots below.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{image.png}
+    \caption{Figure 4.1.1: Completion time comparison}
+    \label{fig:placeholder}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{image2.png}
+    \caption{Figure 4.1.2: Error comparison}
+    \label{fig:placeholder}
+\end{figure}
+
+\end{document}
